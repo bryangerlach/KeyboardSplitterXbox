@@ -324,11 +324,11 @@
                 {
                     if (keyInfo.IsDown)
                     {
-                        this.emergencyLeftDownCount++;
+                        //this.emergencyLeftDownCount++;
                     }
                     else
                     {
-                        this.emergencyLeftUpCount++;
+                        //this.emergencyLeftUpCount++;
                     }
                 }
                 else if (keyInfo.Key == InputHelper.ToInterceptionKey(InputManager.EmergencyRightKey))
@@ -349,14 +349,14 @@
                 }
             }
 
-            if (this.emergencyLeftDownCount >= 5 && this.emergencyLeftUpCount >= 5)
-            {
-                this.OnEmergencyDetected(InputManager.EmergencyLeftKey);
-            }
-            else if (this.emergencyRightDownCount >= 5 && this.emergencyRightUpCount >= 5)
-            {
-                this.OnEmergencyDetected(InputManager.EmergencyRightKey);
-            }
+            // if (this.emergencyLeftDownCount >= 5 && this.emergencyLeftUpCount >= 5)
+            // {
+            //     this.OnEmergencyDetected(InputManager.EmergencyLeftKey);
+            // }
+            // else if (this.emergencyRightDownCount >= 5 && this.emergencyRightUpCount >= 5)
+            // {
+            //     this.OnEmergencyDetected(InputManager.EmergencyRightKey);
+            // }
         }
 
         private void ResetEmergency()
